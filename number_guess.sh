@@ -34,7 +34,7 @@ do
     continue
   fi
 
-  ((NUMBER_OF_GUESSES+))
+  ((NUMBER_OF_GUESSES++))
 
   if [[ $GUESS -eq $SECRET_NUMBER ]]
   then
