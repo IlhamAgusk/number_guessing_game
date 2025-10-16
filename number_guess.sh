@@ -17,7 +17,7 @@ else
   echo "Welcome back, $USERNAME! You have played $GAMES_PLAYED games, and your best game took $BEST_GAME guesses."
 fi
 
-# Generate random secret number
+# Generate secret number between 1 and 1000
 SECRET_NUMBER=$(( RANDOM % 1000 + 1 ))
 NUMBER_OF_GUESSES=0
 
@@ -27,7 +27,7 @@ while true
 do
   read GUESS
 
-  # Check if input is integer
+  # Validate input
   if [[ ! $GUESS =~ ^[0-9]+$ ]]
   then
     echo "That is not an integer, guess again:"
@@ -48,3 +48,4 @@ do
     echo "It's higher than that, guess again:"
   fi
 done
+#final
